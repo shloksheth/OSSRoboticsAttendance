@@ -1,0 +1,44 @@
+{
+  "name": "Attendance",
+  "type": "object",
+  "properties": {
+    "student_name": {
+      "type": "string",
+      "description": "Name of the student"
+    },
+    "school_id": {
+      "type": "string",
+      "description": "Student's school ID"
+    },
+    "team": {
+      "type": "string",
+      "enum": [
+        "Fractal Fusion",
+        "A Byte Irrational",
+        "N.U.T.S",
+        "Rubber Bandits",
+        "Short Circuit",
+        "Loose Screws",
+        "Cattlebots",
+        "Clockwork Mania"
+      ],
+      "description": "Which team the student is on"
+    },
+    "check_in_time": {
+      "type": "string",
+      "description": "Time of check-in (e.g., 3:30 PM)"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of attendance"
+    }
+  },
+  "required": [
+    "student_name",
+    "school_id",
+    "team",
+    "check_in_time",
+    "date"
+  ]
+}
